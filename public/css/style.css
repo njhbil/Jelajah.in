@@ -1,0 +1,12 @@
+html { scroll-behavior: smooth; }
+
+#navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+#navbar.scrolled .nav-text { color: #1B4332 !important; }
+#navbar.scrolled #btn-menu { color: #1B4332 !important; }
+
+.btn-fav.aktif { color: #e11d48; }
+.btn-fav.aktif svg { fill: #e11d48; }
