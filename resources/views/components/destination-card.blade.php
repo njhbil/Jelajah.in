@@ -16,7 +16,7 @@
         </div>
         <p class="text-sm text-slate-500 mb-4">{{ $lokasi }}</p>
         <div class="flex items-center justify-between">
-            <span class="font-extrabold text-primary">{{ $harga }} <span class="font-normal text-xs text-slate-400">/ orang</span></span>
+            <span class="font-extrabold text-primary">{{ $harga }} @if ($harga != 'Gratis')<span class="font-normal text-xs text-slate-400">/ orang</span>@endif</span>
             <a href="#" class="text-sm font-bold bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition">Detail</a>
         </div>
     </div>

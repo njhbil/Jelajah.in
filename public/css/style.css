@@ -10,3 +10,27 @@ html { scroll-behavior: smooth; }
 
 .btn-fav.aktif { color: #e11d48; }
 .btn-fav.aktif svg { fill: #e11d48; }
+
+/* Explore */
+.chip-kategori { background: #fff; color: #475569; border-color: #e2e8f0; }
+.chip-kategori:hover { border-color: #1B4332; color: #1B4332; }
+.chip-kategori.aktif { background: #1B4332; color: #fff; border-color: #1B4332; }
+
+#kategori-chips { scrollbar-width: none; }
+#kategori-chips::-webkit-scrollbar { display: none; }
+
+.page-btn {
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 9999px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    font-weight: 700;
+    font-size: 14px;
+    color: #475569;
+    transition: all .2s;
+}
+.page-btn:hover:not(:disabled) { border-color: #1B4332; color: #1B4332; }
+.page-btn.aktif { background: #1B4332; border-color: #1B4332; color: #fff; }
+.page-btn:disabled { opacity: .4; cursor: not-allowed; }

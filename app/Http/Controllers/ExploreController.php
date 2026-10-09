@@ -1,0 +1,248 @@
+<?php
+
+namespace App\Http\Controllers;
+
+class ExploreController extends Controller
+{
+    public function index()
+    {
+        $destinasi = [
+            [
+                'nama' => 'Pantai Kuta',
+                'lokasi' => 'Badung, Bali',
+                'provinsi' => 'Bali',
+                'kategori' => 'Pantai',
+                'rating' => '4.8',
+                'tiket' => 25000,
+                'gambar' => 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+            ],
+            [
+                'nama' => 'Candi Borobudur',
+                'lokasi' => 'Magelang, Jawa Tengah',
+                'provinsi' => 'Jawa Tengah',
+                'kategori' => 'Budaya',
+                'rating' => '4.9',
+                'tiket' => 50000,
+                'gambar' => 'https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&q=80',
+            ],
+            [
+                'nama' => 'Gunung Bromo',
+                'lokasi' => 'Malang, Jawa Timur',
+                'provinsi' => 'Jawa Timur',
+                'kategori' => 'Gunung',
+                'rating' => '4.9',
+                'tiket' => 35000,
+                'gambar' => 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+            ],
+            [
+                'nama' => 'Raja Ampat',
+                'lokasi' => 'Raja Ampat, Papua Barat',
+                'provinsi' => 'Papua Barat',
+                'kategori' => 'Pantai',
+                'rating' => '5.0',
+                'tiket' => 100000,
+                'gambar' => 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=600&q=80',
+            ],
+            [
+                'nama' => 'Labuan Bajo',
+                'lokasi' => 'Manggarai Barat, NTT',
+                'provinsi' => 'NTT',
+                'kategori' => 'Pantai',
+                'rating' => '4.9',
+                'tiket' => 75000,
+                'gambar' => 'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=600&q=80',
+            ],
+            [
+                'nama' => 'Danau Toba',
+                'lokasi' => 'Samosir, Sumatera Utara',
+                'provinsi' => 'Sumatera Utara',
+                'kategori' => 'Danau',
+                'rating' => '4.7',
+                'tiket' => 20000,
+                'gambar' => 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80',
+            ],
+            [
+                'nama' => 'Malioboro',
+                'lokasi' => 'Kota Yogyakarta, DIY',
+                'provinsi' => 'DI Yogyakarta',
+                'kategori' => 'Kota',
+                'rating' => '4.6',
+                'tiket' => 0,
+                'gambar' => 'https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=600&q=80',
+            ],
+            [
+                'nama' => 'Kelingking Beach',
+                'lokasi' => 'Nusa Penida, Bali',
+                'provinsi' => 'Bali',
+                'kategori' => 'Pantai',
+                'rating' => '4.8',
+                'tiket' => 10000,
+                'gambar' => 'https://images.unsplash.com/photo-1573790387438-4da905039392?w=600&q=80',
+            ],
+            [
+                'nama' => 'Pura Ulun Danu Beratan',
+                'lokasi' => 'Tabanan, Bali',
+                'provinsi' => 'Bali',
+                'kategori' => 'Budaya',
+                'rating' => '4.8',
+                'tiket' => 75000,
+                'gambar' => 'https://images.unsplash.com/photo-1604999333679-b86d54738315?w=600&q=80',
+            ],
+            [
+                'nama' => 'Sawah Tegallalang',
+                'lokasi' => 'Gianyar, Bali',
+                'provinsi' => 'Bali',
+                'kategori' => 'Budaya',
+                'rating' => '4.6',
+                'tiket' => 25000,
+                'gambar' => 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80',
+            ],
+            [
+                'nama' => 'Taman Laut Bunaken',
+                'lokasi' => 'Manado, Sulawesi Utara',
+                'provinsi' => 'Sulawesi Utara',
+                'kategori' => 'Pantai',
+                'rating' => '4.8',
+                'tiket' => 150000,
+                'gambar' => 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80',
+            ],
+            [
+                'nama' => 'Gili Trawangan',
+                'lokasi' => 'Lombok Utara, NTB',
+                'provinsi' => 'NTB',
+                'kategori' => 'Pantai',
+                'rating' => '4.7',
+                'tiket' => 0,
+                'gambar' => 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80',
+            ],
+            [
+                'nama' => 'Gunung Rinjani',
+                'lokasi' => 'Lombok Timur, NTB',
+                'provinsi' => 'NTB',
+                'kategori' => 'Gunung',
+                'rating' => '4.9',
+                'tiket' => 150000,
+                'gambar' => 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80',
+            ],
+            [
+                'nama' => 'Air Terjun Tumpak Sewu',
+                'lokasi' => 'Lumajang, Jawa Timur',
+                'provinsi' => 'Jawa Timur',
+                'kategori' => 'Gunung',
+                'rating' => '4.8',
+                'tiket' => 20000,
+                'gambar' => 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&q=80',
+            ],
+            [
+                'nama' => 'Green Canyon',
+                'lokasi' => 'Pangandaran, Jawa Barat',
+                'provinsi' => 'Jawa Barat',
+                'kategori' => 'Danau',
+                'rating' => '4.6',
+                'tiket' => 200000,
+                'gambar' => 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=600&q=80',
+            ],
+            [
+                'nama' => 'Kawah Putih',
+                'lokasi' => 'Ciwidey, Jawa Barat',
+                'provinsi' => 'Jawa Barat',
+                'kategori' => 'Gunung',
+                'rating' => '4.5',
+                'tiket' => 30000,
+                'gambar' => 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80',
+            ],
+            [
+                'nama' => 'Telaga Warna Dieng',
+                'lokasi' => 'Wonosobo, Jawa Tengah',
+                'provinsi' => 'Jawa Tengah',
+                'kategori' => 'Danau',
+                'rating' => '4.5',
+                'tiket' => 20000,
+                'gambar' => 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80',
+            ],
+            [
+                'nama' => 'Danau Kelimutu',
+                'lokasi' => 'Ende, NTT',
+                'provinsi' => 'NTT',
+                'kategori' => 'Danau',
+                'rating' => '4.8',
+                'tiket' => 5000,
+                'gambar' => 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&q=80',
+            ],
+            [
+                'nama' => 'Bundaran HI',
+                'lokasi' => 'Jakarta Pusat, DKI Jakarta',
+                'provinsi' => 'DKI Jakarta',
+                'kategori' => 'Kota',
+                'rating' => '4.4',
+                'tiket' => 0,
+                'gambar' => 'https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=600&q=80',
+            ],
+            [
+                'nama' => 'Gudeg Wijilan',
+                'lokasi' => 'Kota Yogyakarta, DIY',
+                'provinsi' => 'DI Yogyakarta',
+                'kategori' => 'Kuliner',
+                'rating' => '4.6',
+                'tiket' => 25000,
+                'gambar' => 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80',
+            ],
+            [
+                'nama' => 'Kuliner Jalan Sabang',
+                'lokasi' => 'Jakarta Pusat, DKI Jakarta',
+                'provinsi' => 'DKI Jakarta',
+                'kategori' => 'Kuliner',
+                'rating' => '4.5',
+                'tiket' => 30000,
+                'gambar' => 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80',
+            ],
+            [
+                'nama' => 'Pantai Parangtritis',
+                'lokasi' => 'Bantul, DIY',
+                'provinsi' => 'DI Yogyakarta',
+                'kategori' => 'Pantai',
+                'rating' => '4.4',
+                'tiket' => 10000,
+                'gambar' => 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600&q=80',
+            ],
+            [
+                'nama' => 'Gunung Prau',
+                'lokasi' => 'Wonosobo, Jawa Tengah',
+                'provinsi' => 'Jawa Tengah',
+                'kategori' => 'Gunung',
+                'rating' => '4.7',
+                'tiket' => 15000,
+                'gambar' => 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+            ],
+            [
+                'nama' => 'Pantai Tanjung Tinggi',
+                'lokasi' => 'Belitung, Bangka Belitung',
+                'provinsi' => 'Bangka Belitung',
+                'kategori' => 'Pantai',
+                'rating' => '4.7',
+                'tiket' => 0,
+                'gambar' => 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
+            ],
+            [
+                'nama' => 'Danau Buyan',
+                'lokasi' => 'Buleleng, Bali',
+                'provinsi' => 'Bali',
+                'kategori' => 'Danau',
+                'rating' => '4.7',
+                'tiket' => 50000,
+                'gambar' => 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600&q=80',
+            ],
+        ];
+
+        foreach ($destinasi as $i => $d) {
+            $destinasi[$i]['harga'] = $d['tiket'] == 0 ? 'Gratis' : 'Rp ' . ($d['tiket'] / 1000) . 'rb';
+        }
+
+        $kategori = ['Pantai', 'Gunung', 'Budaya', 'Kuliner', 'Danau', 'Kota'];
+
+        $provinsi = array_unique(array_column($destinasi, 'provinsi'));
+        sort($provinsi);
+
+        return view('explore', compact('destinasi', 'kategori', 'provinsi'));
+    }
+}
