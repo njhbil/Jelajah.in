@@ -11,6 +11,7 @@
                 <a href="#populer" class="hover:text-accent transition">Explore</a>
                 <a href="#kategori" class="hover:text-accent transition">Kategori</a>
                 <a href="#rekomendasi" class="hover:text-accent transition">Rekomendasi</a>
+                <a href="/dashboard" class="hover:text-accent transition">Dashboard</a>
                 <a href="#" class="hover:text-accent transition">Itinerary</a>
             </div>
 
@@ -30,6 +31,7 @@
         <a href="#populer" class="block">Explore</a>
         <a href="#kategori" class="block">Kategori</a>
         <a href="#rekomendasi" class="block">Rekomendasi</a>
+        <a href="/dashboard" class="block">Dashboard</a>
         <a href="#populer" class="block bg-accent text-white text-center py-2.5 rounded-full">Mulai Jelajah</a>
     </div>
 </nav>
