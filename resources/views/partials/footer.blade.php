@@ -35,6 +35,6 @@
         </div>
     </div>
     <div class="border-t border-white/10">
-        <p class="text-center text-xs py-5">© 2026 Jelajah.in – Kelompok Tugas Kuliah. Anggota 1 : Home.</p>
+        <p class="text-center text-xs py-5">© 2026 Jelajah.in.</p>
     </div>
 </footer>
