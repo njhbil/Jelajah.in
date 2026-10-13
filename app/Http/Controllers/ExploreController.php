@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 class ExploreController extends Controller
 {
-    public function index()
+    // DATA DESTINASI UNTUK EXPLORE DAN DETAIL
+    public static function allDestinations(): array
     {
-        $destinasi = [
+        return [
             [
                 'nama' => 'Pantai Kuta',
                 'lokasi' => 'Badung, Bali',
@@ -233,16 +234,38 @@ class ExploreController extends Controller
                 'gambar' => 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600&q=80',
             ],
         ];
+    }
+
+    // MENAMPILKAN HALAMAN EXPLORE
+    public function index()
+    {
+        $destinasi = self::allDestinations();
 
         foreach ($destinasi as $i => $d) {
-            $destinasi[$i]['harga'] = $d['tiket'] == 0 ? 'Gratis' : 'Rp ' . ($d['tiket'] / 1000) . 'rb';
+            $destinasi[$i]['harga'] = $d['tiket'] == 0
+                ? 'Gratis'
+                : 'Rp ' . ($d['tiket'] / 1000) . 'rb';
         }
 
-        $kategori = ['Pantai', 'Gunung', 'Budaya', 'Kuliner', 'Danau', 'Kota'];
+        $kategori = [
+            'Pantai',
+            'Gunung',
+            'Budaya',
+            'Kuliner',
+            'Danau',
+            'Kota'
+        ];
 
-        $provinsi = array_unique(array_column($destinasi, 'provinsi'));
+        $provinsi = array_unique(
+            array_column($destinasi, 'provinsi')
+        );
+
         sort($provinsi);
 
-        return view('explore', compact('destinasi', 'kategori', 'provinsi'));
+        return view('explore', compact(
+            'destinasi',
+            'kategori',
+            'provinsi'
+        ));
     }
 }

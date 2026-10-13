@@ -4,7 +4,7 @@
 
 <header class="relative bg-primary overflow-hidden">
     <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80" alt="" class="absolute inset-0 w-full h-full object-cover opacity-25">
-    <div class="absolute inset-0 bg-gradient-to-b from-primary/70 to-primary"></div>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-32 pb-12">
         <p class="text-accent font-bold text-sm tracking-wide">— Explore</p>

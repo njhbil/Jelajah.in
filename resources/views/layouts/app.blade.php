@@ -33,7 +33,9 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('js/home.js') }}"></script>
-    @stack('scripts')
+<script src="{{ asset('js/home.js') }}"></script>
+<script src="{{ asset('js/favorite-cards.js') }}"></script>
+@stack('scripts')
+
 </body>
 </html>
